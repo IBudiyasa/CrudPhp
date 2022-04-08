@@ -22,7 +22,7 @@
     </header>
 
     <div class="container flex-column justify-content-center mt-5 gap-3">
-        <button type="button" class="btn btn-danger mb-3">
+        <button type="button" class="btn btn-success mb-3">
              <i class="fa fa-plus" aria-hidden="true"><span class="ps-2 pe-2">Tambah Data Buku</span></i>
         </button>
         <div class="tbl-container " style="overflow-x:auto;">
