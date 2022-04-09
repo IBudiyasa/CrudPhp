@@ -1,2 +1,0 @@
-Gede Dana
-Reza kontol
