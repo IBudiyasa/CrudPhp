@@ -18,50 +18,49 @@
         </nav>
     </header>
     <div class="d-flex align-items-center light-blue-gradient" style="height: 100vh;">
-            <div class="container" >
-                <div class="d-flex justify-content-center">
-                    <div class="col-md-6">
-                        <div class="card rounded-0 shadow">
-                            <div class="card-body">
-                                
-                                <div class="card=header bg-primary">
-                                    <h3 class="d-flex justify-content-center">Judul Buku</h3>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="col-md-6">
+
+                    <div class="card rounded-0 shadow">
+                        <div class="card-header bg-primary p-n1">
+                            <h3 class="d-flex justify-content-center text-white">Judul Buku</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="d-grid gap-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Pengarang Buku: </label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter full name">
                                 </div>
-                               
-                                <form class="d-grid gap-3">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Pengarang Buku:  </label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter full name">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Penerbit Buku: </label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Pengarang Buku: </label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Jumlah Halaman: </label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Tahun Terbit :</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <div class="d-flex justify-content-between">
+                                        <button type="submit" class="btn btn-success col-md-3">Submit</button>
+                                        <button type="submit" class="btn btn-danger col-md-3"><a href="./buku.php" style="text-decoration: none !important; color: white;">Keluar</a></button>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Penerbit Buku: </label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Pengarang Buku: </label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Jumlah Halaman: </label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Tahun Terbit :</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="d-flex justify-content-between">
-                                             <button type="submit" class="btn btn-success col-md-2">Submit</button>
-                                             <button type="submit" class="btn btn-danger col-md-2">Keluar</button>
-                                        </div>
-                                      
-                                    </div>
-                                </form>
-                            </div>
+
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+            </div>
 </body>
 
 </html>
