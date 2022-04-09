@@ -23,34 +23,40 @@
                     <div class="col-md-6">
                         <div class="card rounded-0 shadow">
                             <div class="card-body">
-                                <h3>Sign Up</h3>
-                                <form>
+                                
+                                <div class="card=header bg-primary">
+                                    <h3 class="d-flex justify-content-center">Judul Buku</h3>
+                                </div>
+                               
+                                <form class="d-grid gap-3">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Full Name: </label>
+                                        <label for="exampleInputEmail1">Pengarang Buku:  </label>
                                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter full name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address:</label>
+                                        <label for="exampleInputEmail1">Penerbit Buku: </label>
                                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Username: </label>
+                                        <label for="exampleInputEmail1">Pengarang Buku: </label>
                                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Password: </label>
+                                        <label for="exampleInputPassword1">Jumlah Halaman: </label>
                                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Confirm Password:</label>
+                                        <label for="exampleInputPassword1">Tahun Terbit :</label>
                                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                     </div>
-                                    <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    <div class="form-group">
+                                        <div class="d-flex justify-content-between">
+                                             <button type="submit" class="btn btn-success col-md-2">Submit</button>
+                                             <button type="submit" class="btn btn-danger col-md-2">Keluar</button>
+                                        </div>
+                                      
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                         </div>
