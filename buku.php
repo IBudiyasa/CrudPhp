@@ -26,7 +26,9 @@
             <button type="button" class="btn btn-success mb-3">
                 <i class="fa fa-plus" aria-hidden="true"><span class="ps-2 pe-2"><a href="./tambah_buku.php" style="text-decoration: none !important; color: white;">Tambah Data Buku</a></span></i>
             </button>
-
+            <button type="button" class="btn btn-success mb-3">
+                <i class="fa fa-plus" aria-hidden="true"><span class="ps-2 pe-2"><a href="./tambah_kategori_buku.php" style="text-decoration: none !important; color: white;">Tambah Kategori Buku</a></span></i>
+            </button>
             <div class="tbl-container " style="overflow-x:auto;">
                 <table class="table table-striped rounded tbl-tag">
                     <thead class="table-dark">

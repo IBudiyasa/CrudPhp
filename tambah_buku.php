@@ -21,46 +21,87 @@
         <div class="container">
             <div class="d-flex justify-content-center">
                 <div class="col-md-6">
-
                     <div class="card rounded-0 shadow">
                         <div class="card-header bg-primary p-n1">
                             <h3 class="d-flex justify-content-center text-white">Judul Buku</h3>
                         </div>
                         <div class="card-body">
-                            <form class="d-grid gap-3">
+                            <form method="post" class="d-grid gap-3" action="">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Pengarang Buku: </label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter full name">
+                                    <label for="judulBuku">Judul Buku: </label>
+                                    <input type="text" class="form-control" placeholder="Judul Buku" name="judulBuku" id=judulBuku>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Penerbit Buku: </label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                    
+                                    <label for="pengarang">Pengarang : </label>
+                                    <input type="text" class="form-control" placeholder="Nama Pengarang" name="pengarang" id="pengarang">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Pengarang Buku: </label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+                                    <label for="penerbit">Penerbit : </label>
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Penerbit" name="penerbit" id="penerbit">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Jumlah Halaman: </label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <label for="jumlahHalaman">Jumlah Halaman : </label>
+                                    <input type="number" class="form-control" placeholder="Jumlah halaman" name="jumlahHalaman" id="jumlahHalaman">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Tahun Terbit :</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <label for="tahunTerbit">Tahun Terbit :</label>
+                                    <input type="number" class="form-control" placeholder="Tahun Terbit" name="tahunTerbit" id="tahunTerbit">
                                 </div>
+                                <div class="form-group">
+                                    <label for="kategoriBuku">Kategori Buku :</label>
+                                    <select class="form-select" aria-label="Default select example" name="id_kategori">
+                                        <option selected>Pilih kategori</option>
+                                        <?php
+
+                                        include "config.php";
+                                        $sql = "SELECT * FROM kategori_buku";
+                                        $query = mysqli_query($conn, $sql);
+                                       
+                                        while ($data = mysqli_fetch_array($query)) {
+                                            echo "<option value=$data[id_kategori]> $data[nama_ketegori]  </option>";
+                                        }
+
+                                        ?>
+                                    </select>
+                                </div> 
                                 <div class="form-group">
                                     <div class="d-flex justify-content-between">
-                                        <button type="submit" class="btn btn-success col-md-3">Submit</button>
+                                        <button type="submit" class="btn btn-success col-md-3" name="submit">Submit</button>
                                         <button type="submit" class="btn btn-danger col-md-3"><a href="./buku.php" style="text-decoration: none !important; color: white;">Keluar</a></button>
                                     </div>
-
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <?php 
+    
+    require_once("config.php");
+    if(isset($_POST['submit'])) {
+
+
+        $judulBuku = $_POST['judulBuku'];
+        $pengarangBuku = $_POST['pengarang'];
+        $penerbitBuku = $_POST['penerbit'];
+        $jumlahHalaman = $_POST['jumlahHalaman'];
+        $tahunTerbit = $_POST['tahunTerbit'];
+        $kategori = $_POST['id_kategori'];
+
+        $sql = "INSERT INTO buku (judul_buku,pengarang,	penerbit, jumlah_halaman, tahun_terbit, id_kategori) VALUES ('".$judulBuku."','".$pengarangBuku."','".$penerbitBuku."','".$jumlahHalaman."','".$tahunTerbit."','".$kategori."')";
+
+        $result = mysqli_query($conn,$sql);
+        if($result){
+            echo "<script>alert('Data Berhasil Ditambahkan')</script>";
+
+        }
+    } else {
+        echo "<script>alert('Silahkan Lengkapi Data')</script>";
+    }
+    ?>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
