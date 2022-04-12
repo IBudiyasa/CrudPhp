@@ -26,30 +26,30 @@
                             <h3 class="d-flex justify-content-center text-white">Judul Buku</h3>
                         </div>
                         <div class="card-body">
-                            <form method="post" class="d-grid gap-3" action="">
+                            <form method="post" class="d-grid gap-3" action="<?php echo $_SERVER["PHP_SELF"];?>">
                                 <div class="form-group">
                                     <label for="judulBuku">Judul Buku: </label>
-                                    <input type="text" class="form-control" placeholder="Judul Buku" name="judulBuku" id=judulBuku>
+                                    <input type="text" class="form-control" placeholder="Judul Buku" name="judulBuku" id=judulBuku required>
                                 </div>
                                 <div class="form-group">
                                     <label for="pengarang">Pengarang : </label>
-                                    <input type="text" class="form-control" placeholder="Nama Pengarang" name="pengarang" id="pengarang">
+                                    <input type="text" class="form-control" placeholder="Nama Pengarang" name="pengarang" id="pengarang" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="penerbit">Penerbit : </label>
-                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Penerbit" name="penerbit" id="penerbit">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Penerbit" name="penerbit" id="penerbit" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="jumlahHalaman">Jumlah Halaman : </label>
-                                    <input type="number" class="form-control" placeholder="Jumlah halaman" name="jumlahHalaman" id="jumlahHalaman">
+                                    <input type="number" class="form-control" placeholder="Jumlah halaman" name="jumlahHalaman" id="jumlahHalaman" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="tahunTerbit">Tahun Terbit :</label>
-                                    <input type="number" class="form-control" placeholder="Tahun Terbit" name="tahunTerbit" id="tahunTerbit">
+                                    <input type="number" class="form-control" placeholder="Tahun Terbit" name="tahunTerbit" id="tahunTerbit" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="kategoriBuku">Kategori Buku :</label>
-                                    <select class="form-select" aria-label="Default select example" name="id_kategori">
+                                    <select class="form-select" aria-label="Default select example" name="id_kategori" required>
                                         <option selected>Pilih kategori</option>
                                         <?php
 
@@ -97,8 +97,6 @@
             echo "<script>alert('Data Berhasil Ditambahkan')</script>";
 
         }
-    } else {
-        echo "<script>alert('Silahkan Lengkapi Data')</script>";
     }
     ?>
 </body>
